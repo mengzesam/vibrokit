@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">振动小助手</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="trial_weight">试加重</string>
+    <string name="onedisk">单面平衡</string>
+    <string name="twodisk">双面平衡</string>
+    <string name="harmonic">谐分量法</string>
+    <string name="vector_operation">向量运算</string>
+    <string name="decomposition">正反对称分解</string>
+</resources>

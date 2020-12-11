@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment_main">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="385dp"
+        android:layout_height="296dp"
+        android:contentDescription="imageview"
+        app:layout_constraintBottom_toTopOf="@+id/button_trial_weight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_background"
+        tools:src="@tools:sample/avatars"
+        tools:srcCompat="@drawable/ic_launcher_background" />
+
+    <ImageButton
+        android:id="@+id/button_trial_weight"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:contentDescription="@string/trial_weight"
+        android:src="@drawable/ic_launcher_foreground"
+        android:tooltipText="@string/trial_weight"
+        app:layout_constraintBottom_toTopOf="@+id/button_twodisk"
+        app:layout_constraintEnd_toStartOf="@+id/button_onedisk"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:src="@tools:sample/avatars" />
+
+    <ImageButton
+        android:id="@+id/button_onedisk"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:contentDescription="@string/onedisk"
+        android:src="@drawable/ic_launcher_foreground"
+        android:tooltipText="@string/onedisk"
+        app:layout_constraintBottom_toTopOf="@+id/button_harmonic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_trial_weight"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:src="@tools:sample/avatars" />
+
+    <ImageButton
+        android:id="@+id/button_decomposition"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:contentDescription="@string/decomposition"
+        android:src="@drawable/ic_launcher_foreground"
+        android:tooltipText="@string/decomposition"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_vector_operation"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_twodisk"
+        tools:src="@tools:sample/avatars" />
+
+    <ImageButton
+        android:id="@+id/button_vector_operation"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:contentDescription="@string/vector_operation"
+        android:src="@drawable/ic_launcher_foreground"
+        android:tooltipText="@string/vector_operation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_decomposition"
+        app:layout_constraintTop_toBottomOf="@+id/button_harmonic"
+        tools:src="@tools:sample/avatars" />
+
+    <ImageButton
+        android:id="@+id/button_harmonic"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:contentDescription="@string/harmonic"
+        android:src="@drawable/ic_launcher_foreground"
+        android:tooltipText="@string/harmonic"
+        app:layout_constraintBottom_toTopOf="@+id/button_vector_operation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_twodisk"
+        app:layout_constraintTop_toBottomOf="@+id/button_onedisk"
+        tools:src="@tools:sample/avatars" />
+
+    <ImageButton
+        android:id="@+id/button_twodisk"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:contentDescription="@string/twodisk"
+        android:src="@drawable/ic_launcher_foreground"
+        android:tooltipText="@string/twodisk"
+        app:layout_constraintBottom_toTopOf="@+id/button_decomposition"
+        app:layout_constraintEnd_toStartOf="@+id/button_harmonic"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_trial_weight"
+        tools:src="@tools:sample/avatars" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

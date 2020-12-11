@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_host_fragment"
+    app:startDestination="@id/fragment_main">
+    <fragment
+        android:id="@+id/fragment_main"
+        android:name="com.mzs.vibrokit.Fragment_main"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_fragment_main_to_twodisk"
+            app:destination="@id/fragment_twodisk"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_fragment_main_to_harmonic"
+            app:destination="@id/fragment_harmonic"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_fragment_main_to_vector_operation"
+            app:destination="@id/fragment_vector_operation"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_fragment_main_to_decomposition"
+            app:destination="@id/fragment_decomposition"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_fragment_main_to_trial_weight"
+            app:destination="@id/fragment_trial_weight"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_fragment_main_to_onedisk"
+            app:destination="@id/fragment_onedisk"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_twodisk"
+        android:name="com.mzs.vibrokit.Fragment_twodisk"
+        android:label="fragment_twodisk"
+        tools:layout="@layout/fragment_twodisk" />
+    <fragment
+        android:id="@+id/fragment_harmonic"
+        android:name="com.mzs.vibrokit.Fragment_harmonic"
+        android:label="fragment_harmonic"
+        tools:layout="@layout/fragment_harmonic" />
+    <fragment
+        android:id="@+id/fragment_vector_operation"
+        android:name="com.mzs.vibrokit.Fragment_vector_operation"
+        android:label="fragment_vector_operation"
+        tools:layout="@layout/fragment_vector_operation" />
+    <fragment
+        android:id="@+id/fragment_decomposition"
+        android:name="com.mzs.vibrokit.Fragment_decomposition"
+        android:label="fragment_decomposition"
+        tools:layout="@layout/fragment_decomposition" />
+    <fragment
+        android:id="@+id/fragment_trial_weight"
+        android:name="com.mzs.vibrokit.Fragment_trial_weight"
+        android:label="fragment_trial_weight"
+        tools:layout="@layout/fragment_trial_weight" />
+    <fragment
+        android:id="@+id/fragment_onedisk"
+        android:name="com.mzs.vibrokit.Fragment_onedisk"
+        android:label="fragment_onedisk"
+        tools:layout="@layout/fragment_onedisk" />
+</navigation>
