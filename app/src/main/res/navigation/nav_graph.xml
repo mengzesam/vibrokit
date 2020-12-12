@@ -3,83 +3,83 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_host_fragment"
-    app:startDestination="@id/fragment_main">
+    app:startDestination="@id/main_dest">
     <fragment
-        android:id="@+id/fragment_main"
+        android:id="@+id/main_dest"
         android:name="com.mzs.vibrokit.Fragment_main"
-        android:label="fragment_main"
-        tools:layout="@layout/fragment_main" >
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_main">
         <action
             android:id="@+id/action_fragment_main_to_twodisk"
-            app:destination="@id/fragment_twodisk"
+            app:destination="@id/twodisk_dest"
             app:enterAnim="@anim/slide_in_left"
             app:exitAnim="@anim/slide_out_right"
             app:popEnterAnim="@anim/slide_in_right"
             app:popExitAnim="@anim/slide_out_left" />
         <action
             android:id="@+id/action_fragment_main_to_harmonic"
-            app:destination="@id/fragment_harmonic"
+            app:destination="@id/harmonic_dest"
             app:enterAnim="@anim/slide_in_left"
             app:exitAnim="@anim/slide_out_right"
             app:popEnterAnim="@anim/slide_in_right"
             app:popExitAnim="@anim/slide_out_left" />
         <action
             android:id="@+id/action_fragment_main_to_vector_operation"
-            app:destination="@id/fragment_vector_operation"
+            app:destination="@id/vector_operation_dest"
             app:enterAnim="@anim/slide_in_left"
             app:exitAnim="@anim/slide_out_right"
             app:popEnterAnim="@anim/slide_in_right"
             app:popExitAnim="@anim/slide_out_left" />
         <action
             android:id="@+id/action_fragment_main_to_decomposition"
-            app:destination="@id/fragment_decomposition"
+            app:destination="@id/decomposition_dest"
             app:enterAnim="@anim/slide_in_left"
             app:exitAnim="@anim/slide_out_right"
             app:popEnterAnim="@anim/slide_in_right"
             app:popExitAnim="@anim/slide_out_left" />
         <action
             android:id="@+id/action_fragment_main_to_trial_weight"
-            app:destination="@id/fragment_trial_weight"
+            app:destination="@id/trial_weight_dest"
             app:enterAnim="@anim/slide_in_left"
             app:exitAnim="@anim/slide_out_right"
             app:popEnterAnim="@anim/slide_in_right"
             app:popExitAnim="@anim/slide_out_left" />
         <action
             android:id="@+id/action_fragment_main_to_onedisk"
-            app:destination="@id/fragment_onedisk"
+            app:destination="@id/onedisk_dest"
             app:enterAnim="@anim/slide_in_left"
             app:exitAnim="@anim/slide_out_right"
             app:popEnterAnim="@anim/slide_in_right"
             app:popExitAnim="@anim/slide_out_left" />
     </fragment>
     <fragment
-        android:id="@+id/fragment_twodisk"
+        android:id="@+id/twodisk_dest"
         android:name="com.mzs.vibrokit.Fragment_twodisk"
-        android:label="fragment_twodisk"
+        android:label="@string/twodisk"
         tools:layout="@layout/fragment_twodisk" />
     <fragment
-        android:id="@+id/fragment_harmonic"
+        android:id="@+id/harmonic_dest"
         android:name="com.mzs.vibrokit.Fragment_harmonic"
-        android:label="fragment_harmonic"
+        android:label="@string/harmonic"
         tools:layout="@layout/fragment_harmonic" />
     <fragment
-        android:id="@+id/fragment_vector_operation"
+        android:id="@+id/vector_operation_dest"
         android:name="com.mzs.vibrokit.Fragment_vector_operation"
-        android:label="fragment_vector_operation"
+        android:label="@string/vector_operation"
         tools:layout="@layout/fragment_vector_operation" />
     <fragment
-        android:id="@+id/fragment_decomposition"
+        android:id="@+id/decomposition_dest"
         android:name="com.mzs.vibrokit.Fragment_decomposition"
-        android:label="fragment_decomposition"
+        android:label="@string/decomposition"
         tools:layout="@layout/fragment_decomposition" />
     <fragment
-        android:id="@+id/fragment_trial_weight"
+        android:id="@+id/trial_weight_dest"
         android:name="com.mzs.vibrokit.Fragment_trial_weight"
-        android:label="fragment_trial_weight"
+        android:label="@string/trial_weight"
         tools:layout="@layout/fragment_trial_weight" />
     <fragment
-        android:id="@+id/fragment_onedisk"
+        android:id="@+id/onedisk_dest"
         android:name="com.mzs.vibrokit.Fragment_onedisk"
-        android:label="fragment_onedisk"
+        android:label="@string/onedisk"
         tools:layout="@layout/fragment_onedisk" />
 </navigation>

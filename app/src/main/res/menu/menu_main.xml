@@ -1,4 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <item
+        android:id="@+id/main_dest"
+        android:icon="@drawable/ic_home"
+        android:iconTint="@color/black"
+        android:iconTintMode="src_atop"
+        android:title="@string/home"
+        android:tooltipText="@string/home"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/settings_dest"
+        android:icon="@drawable/ic_settings"
+        android:menuCategory="secondary"
+        android:title="@string/settings"
+        app:showAsAction="never" />
 </menu>

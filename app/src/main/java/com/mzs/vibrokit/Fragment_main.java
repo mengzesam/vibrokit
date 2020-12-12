@@ -68,7 +68,7 @@ public class Fragment_main extends Fragment {
                     @Override
                     public void onClick(View view) {
                         Navigation.findNavController(view).navigate(R.id.action_fragment_main_to_trial_weight);
-                        getActivity().setTitle(string.trial_weight);
+                       // getActivity().setTitle(string.trial_weight);
                     }
                 });
         ((ImageButton) view.findViewById(R.id.button_onedisk)).setOnClickListener(
@@ -76,7 +76,7 @@ public class Fragment_main extends Fragment {
                     @Override
                     public void onClick(View view) {
                         Navigation.findNavController(view).navigate(R.id.action_fragment_main_to_onedisk);
-                        getActivity().setTitle(string.onedisk);
+//                        getActivity().setTitle(string.onedisk);
                     }
                 });
         ((ImageButton) view.findViewById(R.id.button_twodisk)).setOnClickListener(
@@ -84,7 +84,7 @@ public class Fragment_main extends Fragment {
                     @Override
                     public void onClick(View view) {
                         Navigation.findNavController(view).navigate(R.id.action_fragment_main_to_twodisk);
-                        getActivity().setTitle(string.twodisk);
+//                        getActivity().setTitle(string.twodisk);
                     }
                 });
         ((ImageButton) view.findViewById(R.id.button_harmonic)).setOnClickListener(
@@ -92,7 +92,7 @@ public class Fragment_main extends Fragment {
                     @Override
                     public void onClick(View view) {
                         Navigation.findNavController(view).navigate(R.id.action_fragment_main_to_harmonic);
-                        getActivity().setTitle(string.harmonic);
+//                        getActivity().setTitle(string.harmonic);
                     }
                 });
         ((ImageButton) view.findViewById(R.id.button_decomposition)).setOnClickListener(
@@ -100,7 +100,7 @@ public class Fragment_main extends Fragment {
                     @Override
                     public void onClick(View view) {
                         Navigation.findNavController(view).navigate(R.id.action_fragment_main_to_decomposition);
-                        getActivity().setTitle(string.decomposition);
+//                        getActivity().setTitle(string.decomposition);
                     }
                 });
         ((ImageButton) view.findViewById(R.id.button_vector_operation)).setOnClickListener(
@@ -108,7 +108,7 @@ public class Fragment_main extends Fragment {
                     @Override
                     public void onClick(View view) {
                         Navigation.findNavController(view).navigate(R.id.action_fragment_main_to_vector_operation);
-                        getActivity().setTitle(string.vector_operation);
+//                        getActivity().setTitle(string.vector_operation);
                     }
                 });
     }
@@ -123,6 +123,6 @@ public class Fragment_main extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        getActivity().setTitle(string.app_name);
+//        getActivity().setTitle(string.app_name);
     }
 }

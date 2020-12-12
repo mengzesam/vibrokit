@@ -1,4 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/primary">
+        <item
+            android:id="@id/main_dest"
+            android:icon="@drawable/ic_home"
+            android:title="@string/home" />
+        <item
+            android:id="@id/trial_weight_dest"
+            android:icon="@drawable/ic_help"
+            android:title="@string/trial_weight" />
+        <item
+            android:id="@+id/onedisk_dest"
+            android:icon="@android:drawable/arrow_down_float"
+            android:title="@string/onedisk" />
+    </group>
+    <item
+        android:id="@+id/settings_dest"
+        android:icon="@drawable/ic_settings"
+        android:title="@string/settings" />
 </menu>
