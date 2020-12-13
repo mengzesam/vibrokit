@@ -11,4 +11,17 @@
     <string name="home">首页</string>
     <string name="settings">设置</string>
     <string name="help">帮助</string>
+    <string name="vibration0">原始振动A0:</string>
+    <string name="vibration1">试加重后振动A1:</string>
+    <string name="trialweight">试加重P:</string>
+    <string name="influence_coefficient">影响系数α:</string>
+    <string name="cal_weight1">需加重量Q(去试重)</string>
+    <string name="cal_weight2">需加重量Q(不去试重):</string>
+    <string name="unit_angle">°</string>
+    <string name="unit_um">um∠</string>
+    <string name="unit_g">g∠</string>
+    <string name="symbol_angle">∠</string>
+    <string name="text_result">计算结果:</string>
+    <string name="button_calculate">计算</string>
+    <string name="button_reset" >重置</string>
 </resources>

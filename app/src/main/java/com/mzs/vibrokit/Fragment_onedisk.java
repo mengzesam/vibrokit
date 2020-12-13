@@ -2,11 +2,17 @@ package com.mzs.vibrokit;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +29,20 @@ public class Fragment_onedisk extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private View mFragment_view;
+    private double mVibration0_a;
+    private double mVibration0_p;
+    private double mVibration1_a;
+    private double mVibration1_p;
+    private double mTrialweight_a;
+    private double mTrialweight_p;
+    private double mAlpha_a;
+    private double mAlpha_p;
+    private double mWeight1_a;
+    private double mWeight1_p;
+    private double mWeight2_a;
+    private double mWeight2_p;
 
     public Fragment_onedisk() {
         // Required empty public constructor
@@ -60,5 +80,30 @@ public class Fragment_onedisk extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_onedisk, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        mFragment_view=view;
+        Button buttonCalculate=(Button) view.findViewById(R.id.button_calonedisk);
+        Button buttonReset=(Button) view.findViewById(R.id.button_resetonedisk);
+
+        buttonCalculate.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        mVibration0_a = Double.parseDouble(
+                                ((EditText) mFragment_view.findViewById(R.id.input_vibration0_a))
+                                    .getText().toString()
+                            );
+                        mVibration0_p = Double.parseDouble(
+                                ((EditText) mFragment_view.findViewById(R.id.input_vibration0_p))
+                                        .getText().toString()
+                        );
+                        RecyclerView list = (RecyclerView) mFragment_view.findViewById(R.id.list_onedisk);
+                    }
+                });
+
     }
 }

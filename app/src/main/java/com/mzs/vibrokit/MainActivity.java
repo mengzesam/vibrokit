@@ -30,8 +30,13 @@ public class MainActivity extends AppCompatActivity {
                 .findFragmentById(R.id.nav_host);
         NavController navController=navHostFragment.getNavController();
         DrawerLayout drawerLayout=findViewById(R.id.drawer_layout);
-        appBarConfiguration=new AppBarConfiguration
-                .Builder(navController.getGraph()).setOpenableLayout(drawerLayout).build();
+        if(drawerLayout!=null) {
+            appBarConfiguration = new AppBarConfiguration
+                    .Builder(navController.getGraph()).setOpenableLayout(drawerLayout).build();
+        }else {
+            appBarConfiguration = new AppBarConfiguration
+                    .Builder(navController.getGraph()).setOpenableLayout(drawerLayout).build();
+        }
         NavigationUI.setupActionBarWithNavController(this,navController,appBarConfiguration);
         NavigationView navView = findViewById(R.id.nav_view);
         NavigationUI.setupWithNavController(navView, navController);
