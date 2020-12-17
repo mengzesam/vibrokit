@@ -6,7 +6,7 @@
     app:startDestination="@id/main_dest">
     <fragment
         android:id="@+id/main_dest"
-        android:name="com.mzs.vibrokit.Fragment_main"
+        android:name="com.mzs.vibrokit.ui.Fragment_main"
         android:label="@string/app_name"
         tools:layout="@layout/fragment_main">
         <action
@@ -54,32 +54,32 @@
     </fragment>
     <fragment
         android:id="@+id/twodisk_dest"
-        android:name="com.mzs.vibrokit.Fragment_twodisk"
+        android:name="com.mzs.vibrokit.ui.Fragment_twodisk"
         android:label="@string/twodisk"
         tools:layout="@layout/fragment_twodisk" />
     <fragment
         android:id="@+id/harmonic_dest"
-        android:name="com.mzs.vibrokit.Fragment_harmonic"
+        android:name="com.mzs.vibrokit.ui.Fragment_harmonic"
         android:label="@string/harmonic"
         tools:layout="@layout/fragment_harmonic" />
     <fragment
         android:id="@+id/vector_operation_dest"
-        android:name="com.mzs.vibrokit.Fragment_vector_operation"
+        android:name="com.mzs.vibrokit.ui.Fragment_vector_operation"
         android:label="@string/vector_operation"
         tools:layout="@layout/fragment_vector_operation" />
     <fragment
         android:id="@+id/decomposition_dest"
-        android:name="com.mzs.vibrokit.Fragment_decomposition"
+        android:name="com.mzs.vibrokit.ui.Fragment_decomposition"
         android:label="@string/decomposition"
         tools:layout="@layout/fragment_decomposition" />
     <fragment
         android:id="@+id/trial_weight_dest"
-        android:name="com.mzs.vibrokit.Fragment_trial_weight"
+        android:name="com.mzs.vibrokit.ui.Fragment_trial_weight"
         android:label="@string/trial_weight"
         tools:layout="@layout/fragment_trial_weight" />
     <fragment
         android:id="@+id/onedisk_dest"
-        android:name="com.mzs.vibrokit.Fragment_onedisk"
+        android:name="com.mzs.vibrokit.ui.Fragment_onedisk"
         android:label="@string/onedisk"
         tools:layout="@layout/fragment_onedisk" />
 </navigation>
