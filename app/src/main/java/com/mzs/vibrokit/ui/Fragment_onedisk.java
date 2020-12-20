@@ -16,7 +16,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.mzs.vibrokit.R;
-import com.mzs.vibrokit.data.OnediskViewModel;
+import com.mzs.vibrokit.model.OnediskViewModel;
 import com.mzs.vibrokit.databinding.FragmentOnediskBinding;
 
 /**
