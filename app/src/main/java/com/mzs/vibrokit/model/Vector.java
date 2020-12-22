@@ -36,6 +36,7 @@ public class Vector {
         }
         ans.ampitude=Math.sqrt(real*real+image*image);
         ans.angle=Math.atan2(image,real)*180/Math.PI;
+        ans.angle=(ans.angle+1080)%360;
         return ans;
     }
 
@@ -70,6 +71,7 @@ public class Vector {
         }
         ans.ampitude=Math.sqrt(real*real+image*image);
         ans.angle=Math.atan2(image,real)*180/Math.PI;
+        ans.angle=(ans.angle+1080)%360;
         return ans;
     }
 
@@ -86,7 +88,7 @@ public class Vector {
             ans.ampitude=-ans.ampitude;
             ans.angle+=180;
         }
-        ans.ampitude=(ans.ampitude+1080)%360;
+        ans.angle=(ans.angle+1080)%360;
         return ans;
     }
 
@@ -108,7 +110,7 @@ public class Vector {
             ans.ampitude=-ans.ampitude;
             ans.angle+=180;
         }
-        ans.ampitude=(ans.ampitude+1080)%360;
+        ans.angle=(ans.angle+1080)%360;
         return ans;
     }
 

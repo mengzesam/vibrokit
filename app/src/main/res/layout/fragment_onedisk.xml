@@ -6,9 +6,13 @@
 
     <data>
         <import type="com.mzs.vibrokit.model.OnediskViewModel"/>
+        <import type="com.mzs.vibrokit.model.OnediskViewModel.OutItem"/>
         <variable
             name="viewmodel"
-            type="com.mzs.vibrokit.model.OnediskViewModel" />
+            type="OnediskViewModel" />
+        <variable
+            name="outitem"
+            type="OutItem" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -283,7 +287,8 @@
                     android:id="@+id/list_onedisk"
                     android:layout_width="401dp"
                     android:layout_height="455dp"
-                    android:fadingEdge="horizontal|vertical" />
+                    android:fadingEdge="horizontal|vertical"
+                    app:layoutManager="LinearLayoutManager"/>
             </LinearLayout>
         </ScrollView>
 

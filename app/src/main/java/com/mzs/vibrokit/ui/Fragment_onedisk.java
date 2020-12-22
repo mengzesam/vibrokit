@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.mzs.vibrokit.BR;
 import com.mzs.vibrokit.R;
 import com.mzs.vibrokit.model.OnediskViewModel;
 import com.mzs.vibrokit.databinding.FragmentOnediskBinding;
@@ -85,6 +86,7 @@ public class Fragment_onedisk extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         mModel=new ViewModelProvider(requireActivity()).get(OnediskViewModel.class);
         mBinding.setLifecycleOwner(getViewLifecycleOwner());
-        mBinding.setViewmodel(mModel);
+        mBinding.setVariable(BR.viewmodel,mModel);
+        mBinding.listOnedisk.setAdapter(mModel.getAdapter());
     }
 }
