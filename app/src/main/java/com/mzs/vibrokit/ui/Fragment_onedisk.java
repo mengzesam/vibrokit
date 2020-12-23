@@ -17,8 +17,15 @@ import android.widget.EditText;
 
 import com.mzs.vibrokit.BR;
 import com.mzs.vibrokit.R;
+import com.mzs.vibrokit.databinding.OnediskItemBinding;
 import com.mzs.vibrokit.model.OnediskViewModel;
 import com.mzs.vibrokit.databinding.FragmentOnediskBinding;
+import com.mzs.vibrokit.recyclerview.DataBoundAdapter;
+import com.mzs.vibrokit.recyclerview.DataBoundViewHolder;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -37,7 +44,7 @@ public class Fragment_onedisk extends Fragment {
     private String mParam2;
 
     private OnediskViewModel mModel;
-    FragmentOnediskBinding mBinding;
+    private FragmentOnediskBinding mBinding;
 
     public Fragment_onedisk() {
         // Required empty public constructor

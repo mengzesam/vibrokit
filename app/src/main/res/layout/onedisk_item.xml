@@ -8,24 +8,29 @@
             type="OutItem" />
     </data>
 
+<!--    for showing all items in recyclerview, linearLayout layout_height must be wrap_content instead of match_parent-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{data.line1}" />
+            android:text="@{data.line1}"
+            android:textSize="12sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{data.line2}" />
+            android:text="@{data.line2}"
+            android:textSize="12sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{data.line3}" />
+            android:text="@{data.line3}"
+            android:textSize="12sp" />
     </LinearLayout>
 </layout>
+

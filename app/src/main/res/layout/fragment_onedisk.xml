@@ -262,11 +262,9 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ScrollView
-            android:layout_width="398dp"
-            android:layout_height="482dp"
-            android:layout_marginStart="16dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="230dp"
-            android:layout_marginEnd="8dp"
             android:onClick="@{()->viewmodel.onResetOnediskClick()}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -279,16 +277,16 @@
 
                 <TextView
                     android:id="@+id/textView38"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/text_result" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/list_onedisk"
-                    android:layout_width="401dp"
-                    android:layout_height="455dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="412dp"
                     android:fadingEdge="horizontal|vertical"
-                    app:layoutManager="LinearLayoutManager"/>
+                    app:layoutManager="LinearLayoutManager" />
             </LinearLayout>
         </ScrollView>
 
