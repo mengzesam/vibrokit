@@ -20,8 +20,6 @@ import androidx.annotation.LayoutRes;
 import androidx.databinding.ViewDataBinding;
 
 import com.mzs.vibrokit.BR;
-import com.mzs.vibrokit.databinding.OnediskItemBinding;
-import com.mzs.vibrokit.model.OnediskViewModel;
 
 import java.util.ArrayList;
 import java.util.Collections;

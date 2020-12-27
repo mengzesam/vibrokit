@@ -2,13 +2,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
-        <import type="com.mzs.vibrokit.model.OnediskViewModel.OutItem"/>
+        <import type="com.mzs.vibrokit.model.OnediskModel.OutItem"/>
         <variable
             name="data"
             type="OutItem" />
     </data>
 
-<!--    for showing all items in recyclerview, linearLayout layout_height must be wrap_content instead of match_parent-->
+    <!--    for showing all items in recyclerview, linearLayout layout_height must be wrap_content instead of match_parent-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -33,4 +33,3 @@
             android:textSize="12sp" />
     </LinearLayout>
 </layout>
-

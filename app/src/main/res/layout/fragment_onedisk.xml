@@ -5,11 +5,11 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-        <import type="com.mzs.vibrokit.model.OnediskViewModel"/>
-        <import type="com.mzs.vibrokit.model.OnediskViewModel.OutItem"/>
+        <import type="com.mzs.vibrokit.model.OnediskModel"/>
+        <import type="com.mzs.vibrokit.model.OnediskModel.OutItem"/>
         <variable
             name="viewmodel"
-            type="OnediskViewModel" />
+            type="com.mzs.vibrokit.model.OnediskModel" />
         <variable
             name="outitem"
             type="OutItem" />

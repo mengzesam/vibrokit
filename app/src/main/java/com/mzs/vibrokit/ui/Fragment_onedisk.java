@@ -7,25 +7,15 @@ import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
 
 import com.mzs.vibrokit.BR;
 import com.mzs.vibrokit.R;
-import com.mzs.vibrokit.databinding.OnediskItemBinding;
-import com.mzs.vibrokit.model.OnediskViewModel;
+import com.mzs.vibrokit.model.OnediskModel;
 import com.mzs.vibrokit.databinding.FragmentOnediskBinding;
-import com.mzs.vibrokit.recyclerview.DataBoundAdapter;
-import com.mzs.vibrokit.recyclerview.DataBoundViewHolder;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -43,7 +33,7 @@ public class Fragment_onedisk extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    private OnediskViewModel mModel;
+    private OnediskModel mModel;
     private FragmentOnediskBinding mBinding;
 
     public Fragment_onedisk() {
@@ -91,7 +81,7 @@ public class Fragment_onedisk extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        mModel=new ViewModelProvider(requireActivity()).get(OnediskViewModel.class);
+        mModel=new ViewModelProvider(requireActivity()).get(OnediskModel.class);
         mBinding.setLifecycleOwner(getViewLifecycleOwner());
         mBinding.setVariable(BR.viewmodel,mModel);
         mBinding.listOnedisk.setAdapter(mModel.getAdapter());

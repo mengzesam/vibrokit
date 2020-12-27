@@ -23,6 +23,7 @@ import androidx.annotation.LayoutRes;
 import androidx.annotation.Nullable;
 import androidx.databinding.OnRebindCallback;
 import androidx.databinding.ViewDataBinding;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
@@ -113,6 +114,8 @@ abstract public class BaseDataBoundAdapter<T extends ViewDataBinding>
     @Override
     public void onAttachedToRecyclerView(RecyclerView recyclerView) {
         mRecyclerView = recyclerView;
+        mRecyclerView.addItemDecoration(new DividerItemDecoration(recyclerView.getContext(),
+                DividerItemDecoration.VERTICAL));
     }
 
     @Override

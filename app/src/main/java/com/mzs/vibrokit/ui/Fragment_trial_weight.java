@@ -2,13 +2,23 @@ package com.mzs.vibrokit.ui;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.mzs.vibrokit.BR;
 import com.mzs.vibrokit.R;
+import com.mzs.vibrokit.databinding.FragmentTrialWeightBinding;
+import com.mzs.vibrokit.model.OnediskModel;
+import com.mzs.vibrokit.model.TrialweightModel;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -25,6 +35,9 @@ public class Fragment_trial_weight extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private TrialweightModel mModel;
+    private FragmentTrialWeightBinding mBinding;
 
     public Fragment_trial_weight() {
         // Required empty public constructor
@@ -48,9 +61,11 @@ public class Fragment_trial_weight extends Fragment {
         return fragment;
     }
 
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true); //For onCreateOptionsMenu to be called, you must have first called setHasOptionsMenu
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
@@ -61,6 +76,22 @@ public class Fragment_trial_weight extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_trial_weight, container, false);
+        mBinding= DataBindingUtil.inflate(inflater,R.layout.fragment_trial_weight,container,false);
+        return mBinding.getRoot();
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        mModel=new ViewModelProvider(requireActivity()).get(TrialweightModel.class);
+        mBinding.setLifecycleOwner(getViewLifecycleOwner());
+        mBinding.setVariable(BR.viewmodel,mModel);
+
+    }
+
+    @Override
+    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        inflater.inflate(R.menu.menu_trialweight,menu);
     }
 }

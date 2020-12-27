@@ -2,7 +2,6 @@ package com.mzs.vibrokit.model;
 
 
 import android.annotation.SuppressLint;
-import android.widget.Adapter;
 
 import androidx.databinding.BaseObservable;
 import androidx.databinding.Bindable;
@@ -13,13 +12,9 @@ import androidx.lifecycle.ViewModel;
 import com.mzs.vibrokit.R;
 import com.mzs.vibrokit.databinding.OnediskItemBinding;
 import com.mzs.vibrokit.recyclerview.DataBoundAdapter;
-import com.mzs.vibrokit.recyclerview.DataBoundViewHolder;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 
-public class OnediskViewModel extends ViewModel {
+public class OnediskModel extends ViewModel {
     public MutableLiveData<String>  mVibration0_a;
     public MutableLiveData<String>  mVibration0_p;
     public MutableLiveData<String>  mVibration1_a;
@@ -34,9 +29,9 @@ public class OnediskViewModel extends ViewModel {
     private Vector mInfluentCoefficent;
     private Vector mWeightingA;
     private Vector mWeightingB;
-    private static int pos=0;
+    private int pos=0;//if static int, odd thing will occure
 
-    public OnediskViewModel() {
+    public OnediskModel() {
         mVibration0_a = new MutableLiveData<String>("80.0");
         mVibration0_p = new MutableLiveData<String>("30.0");
         mVibration1_a = new MutableLiveData<String>("30.0");
@@ -219,7 +214,7 @@ public class OnediskViewModel extends ViewModel {
         }
     }
 
-    public static class OnediskAdapter extends DataBoundAdapter<OnediskItemBinding> {
+    private static class OnediskAdapter extends DataBoundAdapter<OnediskItemBinding> {
 
         public OnediskAdapter(Object... outitems){
             super(R.layout.onedisk_item,outitems);
