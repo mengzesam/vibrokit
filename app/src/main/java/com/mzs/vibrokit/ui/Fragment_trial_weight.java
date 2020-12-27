@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
@@ -14,6 +15,7 @@ import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.github.mikephil.charting.charts.LineChart;
 import com.mzs.vibrokit.BR;
 import com.mzs.vibrokit.R;
 import com.mzs.vibrokit.databinding.FragmentTrialWeightBinding;
@@ -84,9 +86,16 @@ public class Fragment_trial_weight extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         mModel=new ViewModelProvider(requireActivity()).get(TrialweightModel.class);
+        LineChart chart=(LineChart) view.findViewById(R.id.trialweight_chart);
+        mModel.setChart(chart,view);
+        mModel.initChart();
         mBinding.setLifecycleOwner(getViewLifecycleOwner());
         mBinding.setVariable(BR.viewmodel,mModel);
+    }
 
+    @Override
+    public void onResume() {
+        super.onResume();
     }
 
     @Override
